@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Odd Finder</title>
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <style>
+    .body{
+      height: 500px;
+      background-color: gray;
+    }
+</style>
+  </head>
+<body>
+  <div class="container bg-primary">
+    <div class="row">
+        <div class="col-sm-2">
+          <h3>My Projects</h3>
+        </div>
+        <div class="col-sm-10">
+          <a href="/index.html"><button type="button" class="btn btn-info">Home</button></a>
+          <a href="/EvenOdd.html"><button type="button" class="btn btn-warning">Even Odd Finder</button></a>
+          <a href="/Tablegenerator.html"><button type="button" class="btn btn-secondary">Table Generator</button></a>
+          <a href="/Factorial.html"><button type="button" class="btn btn-success">Factorial</button></a>
+          <a href="/Primenumber.html"><button type="button" class="btn btn-danger">Prime Number</button></a>
+          <a href="/currencyconverter.html"><button type="button" class="btn btn-info">Currency Converter</button></a>
+          <a href="/Marksheet.html"><button type="button" class="btn btn-warning">Marksheet</button></a>
+      </div>
+    </div>
+</div>
+<div class="container body">
+  <div class="row">
+    <div class="col">
+      <h2>Even or Odd Finder</h2>
+      <input type="number" id="inputNum" placeholder="Enter a number">
+      <button id="checkButton">Check</button>
+      <p id="result"></p>
+    
+      <script>
+        
+        const input = document.querySelector('#inputNum');
+        const button = document.querySelector('#checkButton');
+        const result = document.querySelector('#result');
+    
+       
+        button.addEventListener('click', () => {
+          const number = parseInt(input.value);
+    
+          if (isNaN(number)) {
+            result.textContent = "Please enter a valid number.";
+            return;
+          }
+    
+          if (number % 2 === 0) {
+            result.innerHTML = `${number} is Even.`;
+          } else {
+            result.innerHTML = `${number} is Odd.`;
+          }
+        });
+      </script>
+    </div>
+  </div>
+</div>
+<div class="container mtop bg-primary text-white">
+  <div class="row">
+      <div class="col">
+          <marquee behavior="" direction="">Project By: Riaz Ahmed - Batch - 49 - UI Learning - Gulshan-e-Iqbal</marquee>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
